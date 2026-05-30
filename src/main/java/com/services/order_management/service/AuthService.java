@@ -26,7 +26,6 @@ public class AuthService {
             return "Email already registered!";
         }
 
-        // Password encode பண்ணி save
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRole("CUSTOMER");
         userRepository.save(user);
